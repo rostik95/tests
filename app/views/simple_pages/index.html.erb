@@ -1,0 +1,19 @@
+
+<div class="col-md-6" style=" float: none; margin: 0 auto;">
+<h4 >Мы рады приветствовать вас на нашем сайте! Этот контент был задуман как помошник для людей с разным социальным статусом, материальным положением и т.д. Здесь вы можете пройти тесты различного характера, и узнать много нового о себе. Не забывайте оставлять комментарии и делиться нами в соц сетях. Всего вам доброго и хорошего настроения!</h4>
+  <% if @blank.count > 0 %>
+			<h3>Существующие тесты :</h3>
+			<%@blank.each do |s|%>
+				<div class="panel panel-primary">
+	  				<div class="panel-heading">
+	    				<h3 class="panel-title"><%= s.name%></h3>
+	  				</div>
+	  				<div class="panel-body">
+		    			<%= s.description%>
+		    			</br>
+						<%= link_to "Подробнее", blank_path(s), :class => "btn btn-info", :style => "margin-top: 1em;" , method: :get %>
+	  				</div>
+				</div>
+			<% end %>
+	<% end %>
+</div>

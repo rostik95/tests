@@ -1,0 +1,14 @@
+<p>
+  <strong>Коментатор:</strong>
+  <%= comment.Коментатор %>
+</p>
+ 
+<p>
+  <strong>Коментарий:</strong>
+  <%= comment.Коментарий %>
+</p>
+<p>
+  <%= link_to 'Удалить Коментарий', [comment.blank, comment],
+               method: :delete,
+               data: { confirm: 'Are you sure?' } %>
+</p>

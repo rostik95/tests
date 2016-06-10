@@ -1,0 +1,13 @@
+<%= form_for([@blank, @blank.comments.build]) do |f| %>
+  <p>
+    <%= f.label :Коментатор %><br>
+    <%= f.text_field :Коментатор %>
+  </p>
+  <p>
+    <%= f.label :Коментарий %><br>
+    <%= f.text_area :Коментарий %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
